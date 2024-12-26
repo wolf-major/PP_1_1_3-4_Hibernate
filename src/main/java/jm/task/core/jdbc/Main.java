@@ -12,14 +12,14 @@ public class Main {
 
         userDao.createUsersTable();
 
-/*        userDao.saveUser("Alex", "Nesterov", (byte) 21);
+        userDao.saveUser("Alex", "Nesterov", (byte) 21);
         userDao.saveUser("Kate", "Smith", (byte) 35);
         userDao.saveUser("Lola", "Winter", (byte) 21);
         userDao.saveUser("James", "Pupkin", (byte) 55);
 
         System.out.println(userDao.getAllUsers().toString());
         userDao.cleanUsersTable();
-        userDao.dropUsersTable();*/
+        userDao.dropUsersTable();
     }
 
 }
