@@ -17,16 +17,6 @@ public class Util {
     private static String driver = "com.mysql.cj.jdbc.Driver";
     private static String dialect = "org.hibernate.dialect.MySQL8Dialect";
 
-/*    public static Connection getConnection() {
-        Connection conn = null;
-        try {
-            conn = DriverManager.getConnection(dbURL, dbUser, dbPass);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return conn;
-    }*/
-
     private static SessionFactory sessionFactory;
 
     public static SessionFactory getSessionFactory() {
@@ -41,10 +31,8 @@ public class Util {
                         .applySettings(configuration.getProperties()).build();
 
                 sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-
-
             } catch (Exception e) {
-                throw new RuntimeException();
+                System.out.println("Ошибка при создании SessionFactory");
             }
         }
         return sessionFactory;
